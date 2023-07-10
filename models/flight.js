@@ -25,8 +25,8 @@ const flightSchema = new Schema({
         max: 9999
     },
     departs: {
-        type: String,
-        default: () => new Date(+new Date() + 7*24*60*60*1000)
+        type: Date,
+        default: () => new Date(+new Date() + 7*24*60*60*1000).toLocaleDateString()
     },
     destinations: [destinationSchema]
 });

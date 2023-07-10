@@ -24,7 +24,7 @@
                             <%= flight.flightNo %>
                         </td>
                         <td>
-                            <%= flight.departs %>
+                            <%= flight.departs.toLocaleDateString() %>
                         </td>
                         <td><a href="/flights/<%= flight._id %>">DETAIL</a></td>
                     </tr>

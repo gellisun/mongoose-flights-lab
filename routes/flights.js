@@ -12,5 +12,4 @@ router.post('/', flightsCtrl.create);
 // GET /flights/:id (show functionality) MUST be below new route
 router.get('/:id', flightsCtrl.show);
 
-
 module.exports = router;
