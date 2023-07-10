@@ -15,7 +15,7 @@ function newFlight(req, res) {
     res.render('flights/new', { errorMsg: '', title: 'Add New Flight', newFlight})
 }
 
-async function create(req, res) {
+  async function create(req, res) {
     let input = req.body.flightNo;
     input = parseInt(input);
     let date = req.body.departs;
@@ -29,8 +29,19 @@ async function create(req, res) {
     }
 }
 
+async function show(req, res) {
+    try {
+      const flight = await Flight.findById(req.params.id);
+      res.render('flights/show', { title: 'Flight Details', flight });
+    } catch (err) {
+      console.log(err);
+      res.redirect('/flights');
+    }
+  }
+
 module.exports = {
     index,
     new: newFlight,
-    create
+    create,
+    show
 }

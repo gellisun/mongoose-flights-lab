@@ -1,0 +1,53 @@
+<%- include('../partials/header') %>
+
+    <h1>
+        <%= title %>
+    </h1>
+    <div class="container-sm">
+        <section>
+            <div>Airline: </div>
+            <div>
+                <%= flight.airline %>
+            </div>
+            <div>Airport: </div>
+            <div>
+                <%= flight.airport %>
+            </div>
+            <div>Flight Number: </div>
+            <div>
+                <%= flight.flightNo %>
+            </div>
+            <div>Departure: </div>
+            <div>
+                <%= flight.departs %>
+            </div>
+            <div>Destination: </div>
+            <div>
+                <%= flight.arrival %>
+            </div>
+            <br></br>
+        </section>
+
+        <h2>Add Destination</h2>
+
+        <form action="/flights/<%= flight._id %>" method="POST">
+            <label class="form-label">Destination Airport:
+                <select name="airport" class="form-select" multiple aria-label="multiple select example">
+                    <option value="SYD">Sydney International Airport</option>
+                    <option value="FCO">Roma Fiumicino</option>
+                    <option value="SFO">San Francisco International Airport</option>
+                    <option value="HND">Tokyo Haneda</option>
+                    <option value="DPS">Bali Depansar International</option>
+                </select>
+            </label><br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Expected Arrival</span>
+                <input type="datetime-local" name="arrival" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div><br>
+            <button type="submit" class="btn btn-dark">Add</button>
+        </form>
+
+    </div>
+
+    <%- include('../partials/footer') %>

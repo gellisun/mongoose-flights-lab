@@ -10,6 +10,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
+var arrivalsRouter = require('./routes/arrivals');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.use('/', indexRouter);
 app.use('/flights', flightsRouter);
+app.use('/', arrivalsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
