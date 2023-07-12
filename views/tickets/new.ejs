@@ -4,7 +4,7 @@
         <br></br>
         <h3>Add New Ticket</h3>
         <br></br>
-        <form action="/flights/<%= flight._id %>" method="POST">
+        <form action="/tickets/flights/<%= flightId %>" method="POST">
             <label class="form-label">Seat:</label>
             <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
             <label class="form-label">Price:</label>
@@ -12,5 +12,3 @@
             <input type="submit" value="Add Ticket">
         </form>
     </div>
-
-    <%- include('../partials/footer') %>
