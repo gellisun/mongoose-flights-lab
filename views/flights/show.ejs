@@ -25,11 +25,11 @@
             <div>
               <ul>
                 <%- tickets.map(function(t) { return `<li>${t.seat}
-                  <small>${t.price}</small></li>`;
+                  $${t.price}</li>`;
                   }).join('') %>
               </ul>
             </div>
-            <a href="/tickets/<%= flight._id %>/new">NEW TICKET</a>
+            <a href="/tickets/<%= flight._id %>/new" class="new-tkt-btn">NEW TICKET</a>
             <br></br>
         </section>
   

@@ -2,6 +2,13 @@
   color: red;
 }
 
-.input-group {
-  display: block;
+.new-tkt-btn {
+  text-decoration: none;
+  background-color: black;
+  padding: 1vmin;
+  color: white;
+}
+
+.nav-btn, .detail-btn {
+  color: white;
 }

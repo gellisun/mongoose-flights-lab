@@ -26,7 +26,7 @@
                         <td>
                             <%= flight.departs.toLocaleDateString() %>
                         </td>
-                        <td><a href="/flights/<%= flight._id %>">DETAIL</a></td>
+                        <td><a href="/flights/<%= flight._id %>" class="detail-btn">DETAIL</a></td>
                     </tr>
                     <% }); %>
             </tbody>
